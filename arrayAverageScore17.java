@@ -5,7 +5,10 @@ public class arrayAverageScore17 {
 
         Scanner sc = new Scanner(System.in);
 
-        int[] score = new int [10];
+        System.out.print("Enter student :");
+        int manyStudent = sc.nextInt();
+
+        int[] score = new int [manyStudent];
         double total = 0;
         double average;
 
@@ -16,7 +19,16 @@ public class arrayAverageScore17 {
         for (int i = 0; i < score.length; i++){
             total += score[i];
         }
+
+        for (int i = 0; i < score.length; i++){
+            if (score[i] > 70){
+                System.out.println("Student " + (i + 1) + " :" + score[i]);
+                i++;
+            }
+        }
         average = total / score.length;
+
+
         System.out.println("The class average score is " + average); 
     }
 }
