@@ -10,7 +10,11 @@ public class arrayValue17 {
             finalScore[i] = sc.nextInt();
         }
         for (int i = 0; i < 10; i++){
-            System.out.println("Final score " + i + " : " + finalScore[i]);
+            if (finalScore[i] > 70){
+                System.out.println("Student " +i+ "passed");
+            } else if (finalScore[i] < 70){
+                System.out.println("Student" +i+ "not passed");
+            }
         }
     }
 }
